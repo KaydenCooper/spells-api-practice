@@ -3,7 +3,9 @@ import Spell from "./Models/Spell.js";
 let _state = {
 
   /** @type {Spell[]} */
-  spells: []
+  spells: [],
+  spellsInfo: {},
+  mySpells: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -11,7 +13,9 @@ let _state = {
  */
 let _listeners = {
 
-  spells: []
+  spells: [],
+  spellsInfo: [],
+  mySpells: []
 };
 
 //NOTE You should not need to change the code from this point down
@@ -23,7 +27,7 @@ let _listeners = {
 function _validateProp(prop) {
   if (!_state.hasOwnProperty(prop) || !Array.isArray(_listeners[prop])) {
     throw new Error(
-      `Unkown property ${prop}, please review your state and listeners`
+      `Unknown property ${prop}, please review your state and listeners`
     );
   }
 }

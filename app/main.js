@@ -1,7 +1,7 @@
 import SpellsController from "./Controllers/SpellsController.js";
 
 class App {
-  _spellsController = new SpellsController();
+  spellsController = new SpellsController();
   constructor() {
 
   }
